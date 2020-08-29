@@ -6,13 +6,29 @@ export default class UserItem extends Component {
 
     this.state = {
       id: 1,
-      loging: "Mojombo",
-      avatar_url: "https://github.com/images/error/octocat_happy.gif",
+      login: "Mojombo",
+      avatar_url: "https://randomuser.me/api/portraits/men/51.jpg",
       html_url: "https://github.com/octocat",
     };
   }
 
   render() {
-    return <div>UserItem</div>;
+    const { avatar_url, login, html_url } = this.state;
+    return (
+      <div className='card text-center'>
+        <img
+          src={avatar_url}
+          alt='login imag'
+          className='round-img'
+          style={{ width: "100px", height: "auto" }}
+        />
+        <h3>{login}</h3>
+        <div>
+          <a href={html_url} className='btn  btn-dark btn-sm my-1'>
+            More
+          </a>
+        </div>
+      </div>
+    );
   }
 }

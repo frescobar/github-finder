@@ -6,10 +6,10 @@ import UserItem from "./user/UserItem";
 class App extends Component {
   render() {
     return (
-      <nav className='navbar bg-primary'>
+      <div>
         <Navbar title='Github Finder' />
         <UserItem />
-      </nav>
+      </div>
     );
   }
 }
